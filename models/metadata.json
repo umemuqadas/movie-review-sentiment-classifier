@@ -1,0 +1,38 @@
+{
+  "best_model": "Logistic Regression",
+  "selection_split": "validation (10% of official train set)",
+  "evaluation_split": "official IMDB test split (held out)",
+  "n_train": 25000,
+  "n_test": 25000,
+  "metrics": {
+    "Logistic Regression": {
+      "Accuracy": 0.894,
+      "Precision (macro)": 0.894,
+      "Recall (macro)": 0.894,
+      "F1-Score (macro)": 0.894,
+      "Precision (neg)": 0.896,
+      "Recall (neg)": 0.8914,
+      "Precision (pos)": 0.8919,
+      "Recall (pos)": 0.8966
+    },
+    "Multinomial Naive Bayes": {
+      "Accuracy": 0.8682,
+      "Precision (macro)": 0.8688,
+      "Recall (macro)": 0.8682,
+      "F1-Score (macro)": 0.8681,
+      "Precision (neg)": 0.8538,
+      "Recall (neg)": 0.8886,
+      "Precision (pos)": 0.8838,
+      "Recall (pos)": 0.8478
+    }
+  },
+  "artifacts": {
+    "pipeline": "models/best_pipeline.joblib",
+    "vectorizer": "models/tfidf_vectorizer.joblib",
+    "preprocessor": "models/text_preprocessor.joblib",
+    "models": {
+      "logistic_regression": "models/logistic_regression_model.joblib",
+      "multinomial_naive_bayes": "models/multinomial_naive_bayes_model.joblib"
+    }
+  }
+}
